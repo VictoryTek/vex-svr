@@ -6,9 +6,8 @@ name: vex-svr
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/cayo
-#base-image: ghcr.io/secureblue/silverblue-main-hardened
-image-version: stable # latest is also supported if you want new updates ASAP
+base-image: ghcr.io/secureblue/silverblue-main-hardened
+image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -18,5 +17,5 @@ modules:
 
 
   
-  - type: initramfs
+  #- type: initramfs
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
