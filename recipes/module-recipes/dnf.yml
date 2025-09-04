@@ -5,12 +5,12 @@ modules:
     #source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
       cleanup: false # clean up added repos after module is done
-      files:
-        - https://download.docker.com/linux/fedora/docker-ce.repo
+#      files:
+#        - https://download.docker.com/linux/fedora/docker-ce.repo
 
-      copr:
-        - gloriouseggroll/nobara-42
-        - peterwu/rendezvous
+#      copr:
+#        - gloriouseggroll/nobara-42
+#        - peterwu/rendezvous
 
       # Put any repo GPG keys here    
 
@@ -27,7 +27,7 @@ modules:
         - tmux
 
         # GNOME & Theming
-        - bibata-cursor-themes                                 # peterwu/rendezvous
+#        - bibata-cursor-themes                                 # peterwu/rendezvous
 
         # Terminal & Shell Enhancements
-        - ghostty                                             # gloriouseggroll/nobara-42
+#        - ghostty                                             # gloriouseggroll/nobara-42
