@@ -18,8 +18,8 @@ modules:
       packages:
         # System Utilities
         - blivet-gui
-        - cockpit-tailscale
-        - cockpit-repos
+#        - cockpit-tailscale
+#        - cockpit-repos
         - fastfetch
         - inxi
         - tailscale
