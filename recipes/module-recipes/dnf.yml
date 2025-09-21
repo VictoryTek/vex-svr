@@ -23,7 +23,7 @@ modules:
         - fastfetch
         - inxi
         - tailscale
-        - trayscale
+#        - trayscale
         - tmux
 
         # GNOME & Theming
