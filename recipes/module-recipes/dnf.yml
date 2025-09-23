@@ -2,29 +2,61 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/module-v1.json
 modules:
   - type: dnf
-    #source: ghcr.io/blue-build/modules/dnf:dnf-module
     repos:
       cleanup: false # clean up added repos after module is done
-#      files:
-#        - https://download.docker.com/linux/fedora/docker-ce.repo
+      files:
+        - tailscale.repo
 
-#      copr:
+      copr:
 #        - gloriouseggroll/nobara-42
 #        - peterwu/rendezvous
+        - ublue-os/packages
 
-      # Put any repo GPG keys here    
+
+      # Put any repo GPG keys here
+      keys:
+        - tailscale.asc
+
+
+    remove:
+      packages:  
+        - adcli
+        - libdnf-plugin-subscription-manager
+        - python3-subscription-manager-rhsm
+        - subscription-manager
+        - subscription-manager-rhsm-certificates
+        - toolbox
+        - yggdrasil
 
     install:
+      install-weak-deps: false
       packages:
-        # System Utilities
-        - blivet-gui
-#        - cockpit-tailscale
-#        - cockpit-repos
-        - fastfetch
-        - inxi
-        - tailscale
-#        - trayscale
-        - tmux
+        - repo: epel
+          packages:
+            - epel-release
+            - just
+            - cockpit-machines
+            - cockpit-networkmanager
+            - cockpit-podman
+            - cockpit-selinux
+            - cockpit-storaged
+            - cockpit-system
+            - firewalld
+            - git-core
+            - libvirt-client
+            - libvirt-daemon
+            - libvirt-daemon-kvm
+            - NetworkManager-wifi
+            - open-vm-tools
+            - pcp-zeroconf
+            - qemu-guest-agent
+            - rsync
+            - systemd-resolved
+            - udisks2-lvm2
+            - virt-install
+            - xdg-user-dirs
+            - tailscale
+            - ublue-os-libvirt-workarounds
 
         # GNOME & Theming
 #        - bibata-cursor-themes                                 # peterwu/rendezvous
