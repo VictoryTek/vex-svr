@@ -16,7 +16,7 @@ image-version: c10s
 modules:
 
   - from-file: module-recipes/files.yml
-  - from-file: module-recipes/dnf.yml
+#  - from-file: module-recipes/dnf.yml
 #  - from-file: module-recipes/default-flatpaks.yml
 #  - from-file: module-recipes/just.yml
   
